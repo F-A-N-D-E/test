@@ -1,0 +1,78 @@
+p.resP {
+    margin-bottom: 10px;
+    text-indent: 10px;
+    font-size: 1.2rem;
+
+    line-height: normal;
+}
+
+
+h3.resH3 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px auto 60px;
+
+    text-decoration: underline 2px;
+    max-width: 70%;
+}
+
+.label {
+    font-size: 1.2rem;
+    margin-right: 15px;
+
+    cursor: pointer;
+    /* flex-wrap: wrap; */
+    line-height: normal;
+}
+
+.input {
+    margin-top: 5px;
+}
+
+.variant {
+    margin-left: 30px;
+    /* flex-wrap: wrap; */
+    display: flex;
+    flex-direction: column;
+}
+
+.res {
+    padding: 30px 0;
+    border-bottom: 2px dotted #3c3c3c;
+}
+
+.res.topBorder {
+    border-top: 2px dotted #3c3c3c;
+}
+
+.btnAdd {
+    background-color: blue;
+    border: 0;
+    color: #ddd;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    margin-top: 30px;
+}
+
+.comments {
+    margin-top: 5px;
+    color: #ddd;
+    font-style: italic;
+    /* font-weight: 500; */
+}
+
+.true {
+    color: #30d158;
+}
+
+.false {
+    color: #ff453a;
+}
+
+.sum {
+    margin-top: 30px;
+    margin-right: 50px;
+    text-align: right;
+}

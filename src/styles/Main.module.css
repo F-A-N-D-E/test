@@ -1,0 +1,53 @@
+/* эти стили связанны с Root и HomeDisplay */
+.wrapper {
+    width: 65%;
+    min-height: 83vh;
+    background-color: #1c1c1e;
+    border-radius: 20px;
+
+    margin: 0 auto 10px;
+    padding: 30px 15px;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 10px 10px 0px;
+    background-color: #3c3c3c;
+
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.testName {
+    border: 0;
+    background-color: transparent;
+    color: #ddd;
+
+    padding: 0;
+    margin: 0 20px;
+
+    font-size: x-large;
+    line-height: normal;
+    text-align: justify;
+
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+
+    text-align: right;
+    padding: 10px 10px;
+}
+
+.length {
+    color: #97979e;
+    margin-left: 20px;
+}
+
+
+@media (max-width: 700px) {
+    .wrapper {
+        width: 100%;
+    }
+}

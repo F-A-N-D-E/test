@@ -1,0 +1,49 @@
+.head {
+    height: 20px;
+    border-bottom: 3px solid #3c3c3c;
+    padding-bottom: 30px;
+
+    margin-bottom: 10px;
+}
+
+.switchBtn {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: #97979e;
+    text-decoration: none;
+
+    padding: 0;
+    margin: 0 20px;
+}
+
+.switchBtn:hover,
+.switchBtn.active {
+    text-decoration: underline;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 10px 10px 0px;
+    background-color: #3c3c3c;
+
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: x-large;
+    line-height: normal;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+
+    text-align: right;
+    padding: 10px 0;
+}
+
+.length {
+    color: #97979e;
+    margin-left: 20px;
+}
