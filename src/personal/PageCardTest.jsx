@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import PersCSS from '../styles/Personal.module.css'
 
@@ -7,7 +7,7 @@ export default function PageCardTest({ name, length, idTest }) {
     let params = useParams()
 
     async function deleteElem() {
-        fetch(`remove/${idTest}`, {
+        fetch(`/api/personal/remove/${idTest}`, {
             method: 'DELETE'
         }).then(r => {
             if (!r.ok) {
@@ -26,7 +26,7 @@ export default function PageCardTest({ name, length, idTest }) {
 
             <div>
                 <button className={PersCSS.switchBtn}>Поделиться</button>
-                <a href={`/create/${params.name}/${idTest}`} className={PersCSS.switchBtn}>Изменить</a>
+                <Link to={`/create/${params.name}/${idTest}`} className={PersCSS.switchBtn}>Изменить</Link>
                 <button onClick={deleteElem} className={PersCSS.switchBtn}>Удалить</button>
             </div>
         </div>

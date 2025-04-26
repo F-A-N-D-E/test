@@ -8,7 +8,7 @@ export default function ResolutionCheck() {
     let param = useParams()
 
     async function getData() {
-        let dataFromDB = await fetch(`/resolution/${param.id}/check`).then(r => r.json()).then(r => r)
+        let dataFromDB = await fetch(`/api/resolution/${param.id}/check`).then(r => r.json()).then(r => r)
         let copy = { ...dataFromDB }
 
         setData(copy)

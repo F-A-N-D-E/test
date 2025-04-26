@@ -12,7 +12,7 @@ export default function MainPagePers() {
 
 
     async function getDataFromDB() {
-        await fetch(`/personal/${params.name}`)
+        await fetch(`/api/personal/${params.name}`)
             .then(r => r.json())
             .then(r => {
                 setData(r.data)

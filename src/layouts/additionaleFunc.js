@@ -40,16 +40,3 @@ export function setDefultLocalStorage (key) {
     }))
   }
 }
-
-export function setRandomSort (arr) {
-  let tempArr = []
-  
-  do{
-    let randomNum = Math.floor(Math.random() * arr.length)
-    
-    tempArr.push(arr[randomNum])
-    arr.splice(randomNum, 1)
-  } while (arr.length)
-  
-  return tempArr  
-}

@@ -6,7 +6,7 @@ export default function HomeDisplay() {
     const [info, setInfo] = useState([])
 
     async function getDate() {
-        let response = await fetch('/')
+        let response = await fetch('/api')
             .then(res => res.json()).then(r => r.data)
 
         setInfo(response)

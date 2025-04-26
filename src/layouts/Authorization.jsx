@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from 'react-router-dom'
 
 import AuthorizCSS from '../styles/Authorization.module.css'
 import AppCSS from '../styles/App.module.css'
@@ -14,7 +15,7 @@ export default function Authorization({ method }) {
 
         if (url === '/authorization') {
 
-            await fetch('/authorization')
+            await fetch('/api/authorization')
                 .then(r => r.text())
                 .then(r => {
                     if (r === 'false') alert('Такое имя уже занято')
@@ -23,7 +24,7 @@ export default function Authorization({ method }) {
 
         } else if (url === '/login') {
 
-            await fetch('/login')
+            await fetch('/api/login')
                 .then(r => r.json())
                 .then(r => {
                     if (r.reg === false) {
@@ -73,7 +74,7 @@ export default function Authorization({ method }) {
                         <button type="submit" className={AuthorizCSS.btnAutho} onClick={(e) => {
                             if (stopSend()) e.preventDefault()
                         }}>Зарегистрироваться</button>
-                        <a href="/login" className={AuthorizCSS.switchBtn}>Войти</a>
+                        <Link to={"/login"} className={AuthorizCSS.switchBtn}>Войти</Link>
                     </>
                     :
                     <>
@@ -81,11 +82,11 @@ export default function Authorization({ method }) {
                             if (stopSend()) e.preventDefault()
                             resetLocalStorage()
                         }}>Войти</button>
-                        <a href="/authorization" className={AuthorizCSS.switchBtn}>Зарегистрироваться</a>
+                        <Link to={"/authorization"} className={AuthorizCSS.switchBtn}>Зарегистрироваться</Link>
                     </>
                 }
 
-                <a href="/" className={AuthorizCSS.switchBtn}>Главная</a>
+                <Link to={"/"} className={AuthorizCSS.switchBtn}>Главная</Link>
 
             </div>
 

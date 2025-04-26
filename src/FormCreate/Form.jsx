@@ -81,7 +81,7 @@ export default function Form() {
 
     async function getDataFromDB() {
         if (params.idTest) {
-            await fetch(`/create/${params.name}/${params.idTest}`)
+            await fetch(`/api/create/${params.name}/${params.idTest}`)
                 .then(r => r.json())
                 .then(r => {
                     setList(r.data)
