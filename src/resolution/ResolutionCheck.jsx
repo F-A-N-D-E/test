@@ -71,7 +71,7 @@ export default function ResolutionCheck() {
             arr.push(res)
         }
 
-        arr.push(countTrueAnswer + ' из ' + data.length)
+        arr.push(countTrueAnswer + ' из ' + (data.length + 1))
         return arr
 
 

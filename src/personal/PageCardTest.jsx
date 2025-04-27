@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import PersCSS from '../styles/Personal.module.css'
 
@@ -18,6 +18,11 @@ export default function PageCardTest({ name, length, idTest }) {
         })
     }
 
+    async function copyHref() {
+        await navigator.clipboard.writeText(`agl.pw/resolution/${idTest}`)
+    }
+
+
     return <div className={PersCSS.card}>
         <div className={PersCSS.name}>{name}</div>
 
@@ -25,8 +30,8 @@ export default function PageCardTest({ name, length, idTest }) {
             <div className={PersCSS.length}>В {length + 1}</div>
 
             <div>
-                <button className={PersCSS.switchBtn}>Поделиться</button>
-                <Link to={`/create/${params.name}/${idTest}`} className={PersCSS.switchBtn}>Изменить</Link>
+                <button onClick={copyHref} className={PersCSS.switchBtn}>Поделиться</button>
+                <a href={`/create/${params.name}/${idTest}`} className={PersCSS.switchBtn}>Изменить</a>
                 <button onClick={deleteElem} className={PersCSS.switchBtn}>Удалить</button>
             </div>
         </div>

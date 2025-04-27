@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from 'react-router-dom'
 
 import AuthorizCSS from '../styles/Authorization.module.css'
 import AppCSS from '../styles/App.module.css'
@@ -74,7 +73,7 @@ export default function Authorization({ method }) {
                         <button type="submit" className={AuthorizCSS.btnAutho} onClick={(e) => {
                             if (stopSend()) e.preventDefault()
                         }}>Зарегистрироваться</button>
-                        <Link to={"/login"} className={AuthorizCSS.switchBtn}>Войти</Link>
+                        <a href={"/login"} className={AuthorizCSS.switchBtn}>Войти</a>
                     </>
                     :
                     <>
@@ -82,11 +81,11 @@ export default function Authorization({ method }) {
                             if (stopSend()) e.preventDefault()
                             resetLocalStorage()
                         }}>Войти</button>
-                        <Link to={"/authorization"} className={AuthorizCSS.switchBtn}>Зарегистрироваться</Link>
+                        <a href={"/authorization"} className={AuthorizCSS.switchBtn}>Зарегистрироваться</a>
                     </>
                 }
 
-                <Link to={"/"} className={AuthorizCSS.switchBtn}>Главная</Link>
+                <a href={"/"} className={AuthorizCSS.switchBtn}>Главная</a>
 
             </div>
 

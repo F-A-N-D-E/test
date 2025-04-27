@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
 import AppCSS from '../styles/App.module.css'
-import { Link } from 'react-router-dom';
 
 export default function Header() {
     let [name, setName] = useState()
@@ -32,10 +31,10 @@ export default function Header() {
             <div ref={refMenu} className={AppCSS.menu} >
                 <nav className={AppCSS.menu_block}>
                     <div className={AppCSS.logo}>AGL</div>
-                    <Link to={'/'} className={AppCSS.menu_item}>Главная</Link>
-                    <Link to={name ? `/create/${name}` : '/login'} className={AppCSS.menu_item}>Создать</Link>
-                    <Link to={name ? `/personal/${name}` : '/login'} className={AppCSS.menu_item}>Кабинет</Link>
-                    <Link to={'/login'} className={AppCSS.menu_item}>Войти</Link>
+                    <a href={'/'} className={AppCSS.menu_item}>Главная</a>
+                    <a href={name ? `/create/${name}` : '/login'} className={AppCSS.menu_item}>Создать</a>
+                    <a href={name ? `/personal/${name}` : '/login'} className={AppCSS.menu_item}>Кабинет</a>
+                    <a href={'/login'} className={AppCSS.menu_item}>Войти</a>
                 </nav>
             </div>
         </header>

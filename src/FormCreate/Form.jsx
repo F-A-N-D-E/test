@@ -31,7 +31,15 @@ export default function Form() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (<>
-        <form method="post" onKeyDown={(e) => { if (e.key === 'Enter') e.preventDefault() }}>
+        <form method="post"
+            action={
+                params.idTest ?
+                    `/api/create/${params.name}/${params.idTest}`
+                    :
+                    `/api/create/${params.name}`
+            }
+            onKeyDown={(e) => { if (e.key === 'Enter') e.preventDefault() }}
+        >
 
             {extraInfo.nameTest || extraInfo.nameTest === '' ?
                 <input type="text" name="nameTest" className={FormCSS.inp_name} placeholder="Введите название теста" autoComplete="off" value={extraInfo.nameTest} onChange={(e) => {

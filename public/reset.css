@@ -2,12 +2,13 @@
     box-sizing: border-box;
 }
 
-body {
+body,
+html {
     overflow-x: hidden;
 }
 
-html {
-    overflow: hidden;
+body {
+    overflow: unset;
 }
 
 html,

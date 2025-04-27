@@ -76,3 +76,14 @@ h3.resH3 {
     margin-right: 50px;
     text-align: right;
 }
+
+
+@media (max-width: 768px) {
+    .label {
+        margin-bottom: 10px;
+    }
+
+    .res {
+        padding: 30px 0 20px;
+    }
+}

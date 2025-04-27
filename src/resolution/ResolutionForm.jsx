@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import ResolCSS from '../styles/Resolution.module.css'
 
 import Resolution from "./Resolution";
+import { useParams } from "react-router-dom";
 // import { setRandomSort } from "../layouts/additionaleFunc";
 
 export default function ResolutionForm() {
     let [data, setData] = useState([])
+    let paramId = useParams()
 
     const getTestFromDB = async () => {
-        let paramId = window.location.pathname.split('/')[2]
-        let dataFromServer = await fetch(`/api/resolution/${paramId}`).then(res => res.json()).then(r => r.data)
+        let dataFromServer = await fetch(`/api/resolution/${paramId.id}`).then(res => res.json()).then(r => r.data)
 
         setData(dataFromServer)
     }
@@ -19,7 +20,7 @@ export default function ResolutionForm() {
     }, [])
     return <>
         {data ? <>
-            <form method="POST" >
+            <form method="POST" action={`/api/resolution/${paramId.id}`}>
 
                 {data.map((elem, index) => {
                     if (typeof elem !== 'object') {

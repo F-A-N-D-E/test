@@ -122,3 +122,15 @@ p.pInTextType {
 .backRed {
     background-color: #ff453a;
 }
+
+
+@media (max-width: 700px) {
+    .type {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .type>label {
+        margin-bottom: 10px;
+    }
+}
